@@ -4,8 +4,20 @@
   "main": "src/index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node ."
+    "start": "node .",
+    "dev": "nodemon src/index.js",
+    "dev:server": "json-server --watch db.json",
+    "mongo:up": "docker-compose up --build --renew-anon-volumes --detach",
+    "mongo:down": "docker-compose down --volumes"
   },
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {
+    "apollo-server": "^3.6.3",
+    "axios": "^0.26.0",
+    "graphql": "^16.3.0",
+    "mongoose": "^6.2.4"
+  },
+  "devDependencies": {
+    "json-server": "^0.17.0",
+    "nodemon": "^2.0.15"
+  }
 }
